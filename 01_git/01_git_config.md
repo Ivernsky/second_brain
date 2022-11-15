@@ -27,5 +27,26 @@ git add
 
 git commit -m 
 
-git push
+git remote add origin https://gitee.com/ivernsky/second_bradin.git
+
+git push -u origin "master"
+```
+
+# 创建git仓库
+```
+mkdir second_bradin
+cd second_bradin
+git init 
+touch README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin git@gitee.com:xxx/xxx.git
+git push -u origin "master"
+```
+
+# 已有仓库
+```
+cd existing_git_repo
+git remote add origin git@gitee.com:ivernsky/second_bradin.git
+git push -u origin "master"
 ```
