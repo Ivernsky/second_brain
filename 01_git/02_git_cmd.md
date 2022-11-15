@@ -9,5 +9,5 @@ git log --pretty=oneline
 
 # 回退
 ```git
-
+git reset
 ```
