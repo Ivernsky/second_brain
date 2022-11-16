@@ -31,8 +31,12 @@ pwd
 git init
 git add
 git commit -m "comment"
-git remote add origin https://gitee.com/ivernsky/second_bradin.git
+git remote add origin https://gitee.com/ivernsky/second_brain.git
+git remote add origni git@github.com:ivernsky/second_brain.git
 git push -u origin "master"
+
+#解除了本地和远程的绑定关系
+git remote rm origin
 ```
 
 # 创建git仓库
