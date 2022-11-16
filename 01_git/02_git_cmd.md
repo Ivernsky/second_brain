@@ -26,7 +26,7 @@ git reflog
 #修改1 -> git add -> 修改2 -> git add(需要重新add) -> git commit
 ```
 
-# 撤销修改
+# 撤销修改(工作区)
 ``` git
 git checkout -- file
 git checkout

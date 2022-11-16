@@ -58,6 +58,7 @@ git push -u origin "master"
 cd existing_git_repo
 git remote add origin git@gitee.com:ivernsky/second_bradin.git
 git push -u origin "master"
+
 ```
 
 # github的配置
