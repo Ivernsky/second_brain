@@ -55,3 +55,6 @@ cd existing_git_repo
 git remote add origin git@gitee.com:ivernsky/second_bradin.git
 git push -u origin "master"
 ```
+
+# github的配置
+设置页面的ssh配置，新建一个ssh kes，用rsa.pub的内容作为ssh公钥填到Key里面
