@@ -1,0 +1,1 @@
+verdi -sv example.v -play demo.tcl -batch &
