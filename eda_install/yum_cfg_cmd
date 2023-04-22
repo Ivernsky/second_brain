@@ -1,0 +1,22 @@
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+#wget http://mirrors.aliyun.com/repo/Centos-7.repo
+cp CentOS7-Base-163.repo /etc/yum.repos.d/CentOS-Base.repo
+#cp CentOS-7.repo /etc/yum.repos.d/CentOS-Base.repo
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+yum clean all
+yum makecache
+yum update
+yum install gvim -y
+yum dos2unix -y
+
+#for verdi:
+yum install -y libXss.so.1
+yum install -y libXScrnSaver-1.2.2-6.1.el7
+yum install -y gcc+ gcc-c++
+
+chsh -s /bin/tcsh
+#reboot to make login shell work
+
+#configure the hostname:
+hostnamectl set-hostname centos7

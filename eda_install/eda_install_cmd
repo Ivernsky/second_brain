@@ -1,0 +1,28 @@
+# 1.use root:
+# 2.mkdir for EDA software
+mkdir -p /software/synopsys
+# 3. install installer
+cd /mnt/hgfs/exchange/SynopsysInstaller/
+./SynopsysInstaller_v3.3.run -d /software/synopsys/installer
+# 4. install scl
+./setup.sh -install_as_root
+/software/synopsys/scl_v11.9
+# 5. install vcs 
+./setup.sh -install_as_root
+/software/synopsys/vcs-mx_vL-2016.06
+# 5. install verdi
+./setup.sh -install_as_root
+/software/synopsys/Verdi3_L-2016.06-1
+
+yum install -y redhat-lsb
+
+#if no network:
+nmcli n #disable
+nmcli n on
+nmcli n #enable
+systemctl restart NetworkManager
+ifconfig
+
+#setup the license
+lmgrd -c /software/synopsys/license/Synopsys.dat
+lmstat
