@@ -1,0 +1,9 @@
+source $env(NPIL1_PATH)/npi_L1.tcl
+
+#debImport -sv example.v
+
+set file_handle [open "hier_tree.csv" "w"]
+::npi_L1::npi_hier_tree_dump_csv "TOP" $file_handle
+close $file_handle
+
+debExit

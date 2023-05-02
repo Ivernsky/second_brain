@@ -1,0 +1,44 @@
+/* ==========================================================================
+ *       Filename:  demo.cpp
+ *    Description:  
+ *        Version:  1.0
+ *        Created:  11/17/11 09:40:29 CST
+ *       Revision:  none
+ *        Company:  Springsoft
+ * ========================================================================== */
+
+#ifndef  DEMO_CPP
+#define  DEMO_CPP
+
+#include <stdio.h>
+#include <string.h>
+#include "npi.h"      // header for NPI
+#include "npi_nl.h"   // header for NPI Netlist L0
+
+
+int main(int argc, char** argv)
+{
+  // initialize NPI process
+  npi_init(argc, argv);
+  // load design
+  npi_load_design(argc, argv);
+
+  // get lib handle by name and path
+  npiNlHandle hdlByNamePath = npi_nl_lib_handle_by_name("demo", "./");
+  printf("Lib: %s, ", npi_nl_get_str(npiNlName, hdlByNamePath));
+  printf("Path: %s\n", npi_nl_get_str(npiNlLibPath, hdlByNamePath));
+
+  // get lib handle by name only, the first matched handle will be returned
+  npiNlHandle hdlByName = npi_nl_lib_handle_by_name("demo", NULL);
+  printf("Lib: %s, ", npi_nl_get_str(npiNlName, hdlByName));
+  printf("Path: %s\n", npi_nl_get_str(npiNlLibPath, hdlByName));
+
+  // end NPI process
+  npi_end();
+
+  return 0;
+}
+
+
+#endif   /* ----- #ifndef DEMO_CPP  ----- */
+

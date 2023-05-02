@@ -1,0 +1,7 @@
+#get into the directory you want to run
+setenv NPIL1_PATH $VERDI_HOME/share/NPI/L1/TCL
+verdi -play demo.tcl -batch &
+verdi -sv example -play demo.tcl -batch &
+
+#refer to the pdf file of :VC_APPS_NPI.pdf::NPI Libraries and NPI Library APIs
+#verdi tcl.pdf

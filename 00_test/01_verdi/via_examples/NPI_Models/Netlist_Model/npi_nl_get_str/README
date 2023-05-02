@@ -1,0 +1,37 @@
+
+###########################################################################################
+
+How to compile demo.cpp:
+
+1) Make sure $NOVAS_INST_DIR is available
+
+2) Update the setting of NPI_PLATFORM in the Makefile if necessary
+
+     NPI_PLATFORM   = LINUX64
+
+3) Make the executable
+  
+  %> make clean; make
+
+###########################################################################################
+
+How to run (demo.exe):
+
+  Remember the libNPI.so and libnpiL1.so should be found in the env. $LD_LIBRARY_PATH)
+
+  %> setenv LD_LIBRARY_PATH $VERDI_HOME/share/NPI/lib/LINUX64:$LD_LIBRARY_PATH  # 64bit
+
+  %> setenv LD_LIBRARY_PATH $VERDI_HOME/share/NPI/lib/LINUX:$LD_LIBRARY_PATH    # 32bit
+
+  %> ./demo.exe 
+
+###########################################################################################
+
+How to run (demo.tcl):
+
+  Set up the env. NPIL1_PATH (should be at $VERDI_HOME/share/NPI/L1/TCL)
+    %> setenv NPIL1_PATH <your_NPIL1_path>
+
+  Play the Tcl by verdi
+  %> verdi -play demo.tcl
+
